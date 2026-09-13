@@ -45,7 +45,12 @@ with st.sidebar:
         type=["pdf"],
         help="Use a progress report, monthly report, weekly report, risk report, meeting minutes, or similar project document."
     )
-    top_k = st.slider("Evidence retrieved per risk area", 3, 8, 5)
+    top_k = st.slider(
+    "Evidence retrieved per risk area",
+    1,
+    4,
+    2
+)
     st.caption("The application retrieves relevant evidence from the PDF before asking the AI for analysis.")
 
 if not uploaded:
